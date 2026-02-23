@@ -17,6 +17,7 @@ img {
 
 body {
   display: grid;
+  min-height: 100svh;
   margin: 3rem;
   font-family:
     system-ui,
@@ -77,6 +78,30 @@ h2 {
   flex-direction: column;
 }
 
+.cardproduct h3 {
+  margin-top: 1em;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.discount {
+  display: flex;
+  justify-content: space-between;
+}
+
+p {
+  margin: 0.5rem 0rem 0rem 0rem;
+}
+
+.sale {
+  background-color: yellow;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
 @media (min-width: 800px) {
   body {
     margin: 6rem;
@@ -99,5 +124,11 @@ h2 {
 
   .category_list {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
   }
 }
