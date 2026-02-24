@@ -49,6 +49,11 @@ h2 {
   font-size: 2rem;
 }
 
+h3 {
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+}
+
 .category_list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -126,6 +131,23 @@ p {
   color: rgb(164, 164, 164);
 }
 
+.product-text p {
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+button {
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+button:hover {
+  opacity: 20%;
+}
+
 @media (min-width: 900px) {
   .product-container {
     grid-template-columns: repeat(2, 1fr);
@@ -162,5 +184,22 @@ p {
 
   .product-container {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .product-img-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+  }
+
+  .product-img-text p {
+    font-size: 1.2rem;
+  }
+
+  button {
+    padding: 0.8rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
   }
 }
