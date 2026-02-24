@@ -51,13 +51,13 @@ h2 {
 
 .category_list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1rem;
 }
 
 .category_list a {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   padding: 2em;
   background-color: black;
   color: white;
@@ -122,6 +122,10 @@ p {
   color: rgb(171, 28, 28);
 }
 
+.product {
+  color: rgb(164, 164, 164);
+}
+
 @media (min-width: 900px) {
   .product-container {
     grid-template-columns: repeat(2, 1fr);
@@ -150,6 +154,10 @@ p {
 
   .category_list {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .category_list a {
+    font-size: 1.5rem;
   }
 
   .product-container {
