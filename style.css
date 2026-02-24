@@ -10,14 +10,10 @@ img {
   display: block;
 }
 
-.cardproduct main {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-
 body {
   display: grid;
-  margin: 3rem;
+  min-height: 100svh;
+  margin: 2rem;
   font-family:
     system-ui,
     -apple-system,
@@ -44,7 +40,7 @@ nav {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 6vw, 4rem);
   color: brown;
 }
 
@@ -55,17 +51,32 @@ h2 {
 
 .category_list {
   display: grid;
-  grid-template-columns: subgrid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1rem;
 }
 
 .category_list a {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   padding: 2em;
   background-color: black;
   color: white;
   border-radius: 0.5rem;
+}
+
+.cardproduct {
+  position: relative;
+}
+
+.cardproduct .sold {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: clamp(0.5rem, 2vw, 1rem);
+  margin: 1rem;
+  background-color: black;
+  border-radius: 0.5rem;
+  color: white;
 }
 
 .category_list a:hover {
@@ -77,12 +88,56 @@ h2 {
   flex-direction: column;
 }
 
-@media (min-width: 800px) {
+.cardproduct h3 {
+  margin-top: 1em;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+.discount {
+  display: flex;
+  justify-content: space-between;
+}
+
+p {
+  margin: 0.5rem 0rem 0rem 0rem;
+}
+
+.sale {
+  background-color: rgb(255, 255, 70);
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.product-container .soldout img {
+  opacity: 0.5;
+}
+
+.line {
+  text-decoration: line-through;
+  color: rgb(171, 28, 28);
+}
+
+.product {
+  color: rgb(164, 164, 164);
+}
+
+@media (min-width: 900px) {
+  .product-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
   body {
     margin: 6rem;
   }
 
-  header {
+  .flex-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -99,5 +154,13 @@ h2 {
 
   .category_list {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .category_list a {
+    font-size: 1.5rem;
+  }
+
+  .product-container {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
