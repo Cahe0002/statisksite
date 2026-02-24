@@ -192,6 +192,10 @@ button:hover {
     gap: 6rem;
   }
 
+  .product-img-text h2 {
+    margin: 0rem;
+  }
+
   .product-img-text p {
     font-size: 1.2rem;
   }
