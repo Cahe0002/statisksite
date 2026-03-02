@@ -74,6 +74,7 @@ h3 {
 }
 
 .cardproduct .sold {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -84,13 +85,21 @@ h3 {
   color: white;
 }
 
+.soldout .sold {
+  display: block;
+}
+
 .catCard:hover {
   opacity: 20%;
 }
 
-.cardproduct article {
+.cardproduct {
   display: flex;
   flex-direction: column;
+}
+
+.cardproduct img {
+  object-fit: cover;
 }
 
 .cardproduct h3 {
