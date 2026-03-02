@@ -20,7 +20,7 @@ function showData(data) {
   data.forEach((product) => {
     console.log(product);
     markup += `
-    <a href="product.html">
+    <a href="productdetails.html?id=${product.id}">
           <article class="cardproduct soldout">
             <img
               src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp"
