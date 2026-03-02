@@ -21,7 +21,7 @@ function showData(data) {
     console.log(product);
     markup += `
     <a href="product.html">
-          <article class="cardproduct ${product.soldout && "soldout"}">
+          <article class="cardproduct soldout">
             <img
               src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp"
               alt="puma bag"
@@ -31,7 +31,7 @@ function showData(data) {
             <p class="product">${product.articletype} | ${product.brandname}</p>
             <p>DKK <span class="line">${product.price}</span>,-</p>
             <div class="discount">
-              <p>Now DKK <span>${Math.round(product.price - (product.price * product.discount) / 100)}</span>,-</p>
+              <p>Now DKK <span>795</span>,-</p>
               <p class="sale">${product.discount}%</p>
             </div>
           </article>
