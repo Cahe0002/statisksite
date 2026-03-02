@@ -10,8 +10,8 @@ function getData() {
 
 function showData(data) {
   console.log(data);
-  data.forEach((category) => {
-    container.innerHTML += `<a class="catCard" href="productlist.html">${category.category}</a>`;
+  data.forEach((element) => {
+    container.innerHTML += `<a class="catCard" href="productlist.html?category=${element.category}">${element.category}</a>`;
   });
 }
 
