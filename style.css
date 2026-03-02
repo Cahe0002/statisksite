@@ -148,12 +148,6 @@ button:hover {
   opacity: 20%;
 }
 
-@media (min-width: 900px) {
-  .product-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 @media (min-width: 1000px) {
   body {
     margin: 6rem;

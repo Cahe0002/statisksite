@@ -1,5 +1,12 @@
+const klikKategori = new URLSearchParams(window.location.search).get(
+  "category",
+);
+
+// console.log(klikKategori);
+
 const container = document.querySelector("#productlist");
-const endpoint = `https://kea-alt-del.dk/t7/api/products`;
+const endpoint = `https://kea-alt-del.dk/t7/api/products?category=${klikKategori}`;
+document.querySelector("h2").textContent = klikKategori;
 
 function getData() {
   fetch(endpoint)
@@ -21,11 +28,11 @@ function showData(data) {
             />
             <span class="sold">Sold Out</span>
             <h3>${product.productdisplayname}</h3>
-            <p class="product">Backback | Puma</p>
+            <p class="product">${product.articletype} | ${product.brandname}</p>
             <p>DKK <span class="line">${product.price}</span>,-</p>
             <div class="discount">
               <p>Now DKK 795,-</p>
-              <p class="sale">25%</p>
+              <p class="sale">${product.discount}%</p>
             </div>
           </article>
         </a>

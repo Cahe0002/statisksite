@@ -11,7 +11,7 @@ function getData() {
 function showData(data) {
   console.log(data);
   data.forEach((element) => {
-    container.innerHTML += `<a class="catCard" href="productlist.html">${element.category}</a>`;
+    container.innerHTML += `<a class="catCard" href="productlist.html?category=${element.category}">${element.category}</a>`;
   });
 }
 
