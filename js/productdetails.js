@@ -14,12 +14,13 @@ function showData(details) {
   console.log(details);
   container.innerHTML = `<a href="productlist.html?category=${details.category}">
         <h3>Back</h3>
-      </a> <section class="product-img-text">
+      </a> <section class="product-img-text" ${details.soldout && "soldout"}">
         <div>
           <img
             src="https://kea-alt-del.dk/t7/images/webp/640/${details.id}.webp"
             alt="${details.productdisplayname}"
           />
+          <span class="sold">Sold Out</span>
         </div>
         <div class="product-text">
           <h2>${details.productdisplayname}</h2>
