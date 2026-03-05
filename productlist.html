@@ -17,10 +17,19 @@
       </nav>
     </header>
     <main class="list_container">
-      <button>All</button>
-      <button>Unisex</button>
-      <button>Women</button>
-      <button>Men</button>
+      <div id="filter">
+        <button>All</button>
+        <button>Unisex</button>
+        <button>Women</button>
+        <button>Men</button>
+      </div>
+
+      <div id="sorter">
+        <button data-text="az">A-Z</button>
+        <button data-text="za">Z-A</button>
+        <button data-price="acc">Low-heigh</button>
+        <button data-price="dec">Heigh-low</button>
+      </div>
 
       <h2>Apparel</h2>
       <section class="product-container" id="productlist"></section>
