@@ -1,3 +1,4 @@
+
 const endpoint = "https://kea-alt-del.dk/t7/api/categories";
 
 const container = document.querySelector("#linkcontainer");
