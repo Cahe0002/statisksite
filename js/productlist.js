@@ -9,10 +9,6 @@ const endpoint = `https://kea-alt-del.dk/t7/api/products?category=${klikKategori
 document.querySelector("h2").textContent = klikKategori;
 
 document
-  .querySelectorAll("#filter button")
-  .forEach((knap) => knap.addEventListener("click", filter));
-
-document
   .querySelectorAll("#sorter button")
   .forEach((knap) => knap.addEventListener("click", sorter));
 
